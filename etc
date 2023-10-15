@@ -1,0 +1,16 @@
+cd ComfyUI/custom_nodes/
+!git clone https://github.com/ltdrdata/ComfyUI-Manager
+!git clone https://github.com/ltdrdata/ComfyUI-Impact-Pack
+!git clone https://github.com/SeargeDP/SeargeSDXL.git
+
+!supervisorctl restart comfyui
+
+!wget https://huggingface.co/lllyasviel/sd_control_collection/blob/main/sai_xl_canny_128lora.safetensors
+!wget https://huggingface.co/lllyasviel/sd_control_collection/blob/main/ip-adapter_xl.pth
+!wget https://huggingface.co/lllyasviel/sd_control_collection/blob/main/sai_xl_depth_128lora.safetensors
+
+https://raw.githubusercontent.com/ai-dock/comfyui/main/config/provisioning/get-models-sd-official.sh
+
+config/provisioning/seargedp-seargesdxl.sh
+
+https://github.com/iparigame/comfyui_alt/blob/ede3e3717a1067953d2d638f5fc8e208c664ddd3/config/provisioning/seargedp-seargesdxl.sh
