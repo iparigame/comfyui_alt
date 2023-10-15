@@ -14,13 +14,6 @@ checkpoints_dir=${models_dir}/checkpoints
 vae_dir=${models_dir}/vae
 loras_dir=${models_dir}/loras
 upscale_dir=${models_dir}/upscale_models
-controlnet_dir=${models_dir}/controlnet
-
-comfyuimanager_dir="/opt/ComfyUI/custom_nodes/ComfyUI-Manager"
-comfyuimanager_git="https://github.com/ltdrdata/ComfyUI-Manager"
-
-comfyuiimpact_dir="/opt/ComfyUI/custom_nodes/ComfyUI-Impact-Pack"
-comfyuiimpact_git="https://github.com/ltdrdata/ComfyUI-Impact-Pack"
 
 base_model_file=${checkpoints_dir}/sd_xl_base_1.0.safetensors
 base_model_url=https://huggingface.co/stabilityai/stable-diffusion-xl-base-1.0/resolve/main/sd_xl_base_1.0.safetensors
@@ -34,27 +27,12 @@ siax_upscale_file=${upscale_dir}/4x_NMKD-Siax_200k.pth
 siax_upscale_url=https://huggingface.co/uwg/upscaler/resolve/main/ESRGAN/4x_NMKD-Siax_200k.pth
 ultrasharp_upscale_file=${upscale_dir}/4x-UltraSharp.pth
 ultrasharp_upscale_url=https://huggingface.co/uwg/upscaler/resolve/main/ESRGAN/4x-UltraSharp.pth
-controlnet_canny_file=${controlnet_dir}/kohya_controllllite_xl_canny.safetensors
-controlnet_canny_url=https://huggingface.co/lllyasviel/sd_control_collection/blob/main/kohya_controllllite_xl_canny.safetensors
-controlnet_depth_file=${controlnet_dir}/kohya_controllllite_xl_depth.safetensors
-controlnet_depth_url=https://huggingface.co/lllyasviel/sd_control_collection/blob/main/kohya_controllllite_xl_depth.safetensors
 
 if [[ ! -d $searge_dir ]]; then
     git clone https://github.com/SeargeDP/SeargeSDXL $searge_dir
 else
     cd $searge_dir && git pull
 fi
-
-if [[ ! -d $comfyuimanager_dir ]]; then
-    git clone https://github.com/ltdrdata/ComfyUI-Manager $comfyuimanager_dir
-else
-    cd $comfyuimanager_dir && git pull
-fi
-
-if [[ ! -d $comfyuiimpact_dir ]]; then
-    git clone https://github.com/ltdrdata/ComfyUI-Impact-Pack $comfyuiimpact_dir
-else
-    cd $comfyuiimpact_dir && git pull
 
 if [[ ! -f ${base_model_file} ]]; then
     wget -O ${base_model_file} ${base_model_url}
@@ -78,12 +56,4 @@ fi
 
 if [[ ! -f ${ultrasharp_upscale_file} ]]; then
     wget -O ${ultrasharp_upscale_file} ${ultrasharp_upscale_url}
-fi
-
-if [[ ! -f ${controlnet_canny_file} ]]; then
-    wget -O ${controlnet_canny_file} ${controlnet_canny_url}
-fi
-
-if [[ ! -f ${controlnet_depth_file} ]]; then
-    wget -O ${controlnet_depth_file} ${controlnet_depth_url}
 fi
