@@ -5,15 +5,17 @@ cd ComfyUI/custom_nodes/
 
 !supervisorctl restart comfyui
 
-!wget https://huggingface.co/lllyasviel/sd_control_collection/blob/main/sai_xl_canny_128lora.safetensors
-!wget https://huggingface.co/lllyasviel/sd_control_collection/blob/main/ip-adapter_xl.pth
-!wget https://huggingface.co/lllyasviel/sd_control_collection/blob/main/sai_xl_depth_128lora.safetensors
+!wget https://huggingface.co/lllyasviel/sd_control_collection/resolve/main/sai_xl_canny_128lora.safetensors
+!wget https://huggingface.co/lllyasviel/sd_control_collection/resolve/main/ip-adapter_xl.pth
+!wget https://huggingface.co/lllyasviel/sd_control_collection/resolve/main/sai_xl_depth_128lora.safetensors
+!wget https://huggingface.co/lllyasviel/sd_control_collection/resolve/main/t2i-adapter_xl_openpose.safetensors
+t2i-adapter_xl_openpose.safetensors
 
 https://raw.githubusercontent.com/ai-dock/comfyui/main/config/provisioning/get-models-sd-official.sh
 
 config/provisioning/seargedp-seargesdxl.sh
 
-https://github.com/iparigame/comfyui_alt/blob/ede3e3717a1067953d2d638f5fc8e208c664ddd3/config/provisioning/seargedp-seargesdxl.sh
+https://github.com/iparigame/comfyui_alt/resolve/ede3e3717a1067953d2d638f5fc8e208c664ddd3/config/provisioning/seargedp-seargesdxl.sh
 
 Stock Photo SDXL Model
 !wget https://civitai.com/api/download/models/154593 --content-disposition
