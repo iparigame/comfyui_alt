@@ -14,3 +14,6 @@ https://raw.githubusercontent.com/ai-dock/comfyui/main/config/provisioning/get-m
 config/provisioning/seargedp-seargesdxl.sh
 
 https://github.com/iparigame/comfyui_alt/blob/ede3e3717a1067953d2d638f5fc8e208c664ddd3/config/provisioning/seargedp-seargesdxl.sh
+
+Stock Photo SDXL Model
+!wget https://civitai.com/api/download/models/154593 --content-disposition
