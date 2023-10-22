@@ -19,3 +19,19 @@ https://github.com/iparigame/comfyui_alt/resolve/ede3e3717a1067953d2d638f5fc8e20
 
 Stock Photo SDXL Model
 !wget https://civitai.com/api/download/models/154593 --content-disposition
+
+Copax Timeless SDXL
+!wget https://civitai.com/api/download/models/172160 --content-disposition
+
+ThinkDiffusionXL
+!wget https://civitai.com/api/download/models/190908 --content-disposition
+
+MOHAWK XL
+!wget https://civitai.com/api/download/models/172319 --content-disposition
+
+CinemaxAlpha XL
+!wget https://civitai.com/api/download/models/144968 --content-disposition
+
+LORA XL
+Black and color
+!wget https://civitai.com/api/download/models/191463 --content-disposition
